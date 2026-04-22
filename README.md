@@ -8,24 +8,26 @@ Cross-encoder re-ranking
 
 # Architecture  
 
-User Query  
-   ↓  
-Query Rewriting  
-   ↓  
- ┌───────────────┬────────────────┐  
- │ Dense Search  │ Sparse Search  │  
- │ (FAISS)       │ (BM25)         │  
- └──────┬────────┴───────┬────────┘  
-        ↓                ↓  
-        → Score Fusion →  
-              ↓  
-        Re-Ranker (Cross Encoder)  
-              ↓  
-        Top-K Context  
-              ↓  
-        LLM Generator  
-              ↓  
-         Final Answer  
+```text
+User Query
+   ↓
+Query Rewriting
+   ↓
+ ┌───────────────┬────────────────┐
+ │ Dense Search  │ Sparse Search  │
+ │ (FAISS)       │ (BM25)         │
+ └──────┬────────┴───────┬────────┘
+        ↓                ↓
+        → Score Fusion →
+              ↓
+        Re-Ranker (Cross Encoder)
+              ↓
+        Top-K Context
+              ↓
+        LLM Generator
+              ↓
+         Final Answer
+```
   
 # Tech Stack  
 
