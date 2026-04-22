@@ -1,0 +1,11 @@
+faiss-cpu
+rank-bm25
+transformers
+sentence-transformers
+pypdf
+tqdm
+ollama
+numpy
+torch==2.11.0
+#pandas
+#scikit-learn
