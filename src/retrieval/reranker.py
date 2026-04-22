@@ -13,8 +13,8 @@ import torch
 
 class Reranker:
     def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base")
-        self.model = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base")
+        self.tokenizer = AutoTokenizer.from_pretrained("BAAI/bge-reranker-base") #
+        self.model = AutoModelForSequenceClassification.from_pretrained("BAAI/bge-reranker-base") # specifically trained as a cross-encoder. behaves like a relevance scoring function
 
     def rerank(self, query, docs, top_k=5):
         pairs = [(query, doc) for doc, _ in docs] # cross-encoder processes the (query – candidate document) pair jointly.
