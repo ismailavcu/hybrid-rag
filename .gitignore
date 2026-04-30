@@ -10,3 +10,5 @@ ENV/
 .env
 .env.*
 !.env.examplegit 
+
+.deepeval
