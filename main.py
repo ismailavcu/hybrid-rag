@@ -5,11 +5,11 @@ from src.retrieval.dense import DenseRetriever
 from src.retrieval.reranker import Reranker
 from src.rag.pipeline import rag_pipeline
 
-PDF_PATH = "data/raw/fastapi-contrib-readthedocs-io-en-latest.pdf"
+PDF_PATH = "data/raw/History of BMW - Wikipedia.pdf"
 
 if __name__ == "__main__":
 
-    query = "how to use dependency injection in fastapi"
+    query = "When was bmw established?"
 
     answer, docs = rag_pipeline(query, PDF_PATH)
 

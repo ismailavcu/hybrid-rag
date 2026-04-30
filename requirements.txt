@@ -7,5 +7,8 @@ tqdm
 ollama
 numpy
 torch==2.11.0
-#pandas
-#scikit-learn
+python-dotenv
+langchain
+openai
+deepeval
+#langchain_community

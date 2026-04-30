@@ -29,7 +29,7 @@ if __name__ == "__main__":
     from src.ingestion.chunker import chunk_text
     from src.ingestion.pdf_loader import load_pdf
 
-    file_path = r"data/raw/fastapi-contrib-readthedocs-io-en-latest.pdf"
+    file_path = r"data/raw/History of BMW - Wikipedia.pdf"
     texts = load_pdf(file_path)
     chunks = chunk_text(texts)
 
